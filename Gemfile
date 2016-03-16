@@ -12,7 +12,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "hubspot-ruby"
-gem 'hubspot'
 
 group :production do
   gem 'pg'
