@@ -57,8 +57,6 @@ GEM
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    hubspot (0.0.2)
-      rails (>= 3)
     hubspot-ruby (0.1.8)
       activesupport (>= 3.0.0)
       httparty (>= 0.10.0)
@@ -154,7 +152,6 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
-  hubspot
   hubspot-ruby
   jbuilder (~> 2.0)
   jquery-rails
