@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   resources :enquiries
-  root "enquiries#index"
+  root "contacts#index"
 end

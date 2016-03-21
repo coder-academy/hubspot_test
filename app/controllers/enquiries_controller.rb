@@ -4,6 +4,17 @@ class EnquiriesController < ApplicationController
   # GET /enquiries
   # GET /enquiries.json
   def index
+    # Hubspot::Contact.create!("aaron@coderfactory.com", {firstname: "Test", lastname: "Contact"})
+    lists = HTTParty.get "https://api.hubapi.com/contacts/v1/lists?hapikey=dec3140b-502f-42da-ada2-6c3c19772d94"
+    puts "HHHHHHHHHHH"
+    listp = lists.first.last.select { |list| list["name"] == "New Test List"}
+    listp = listp.first
+    puts listp["name"]
+    puts "FFFFFFFFFFFFFFF"
+    contact_list = HTTParty.get "https://api.hubapi.com/contacts/v1/lists/#{listp['listId'].to_i}/contacts/all?hapikey=dec3140b-502f-42da-ada2-6c3c19772d94"
+    puts contact_list["contacts"].first["properties"]["firstname"]["value"]
+    puts "LLLLLLLLLLLLLL"
+    puts listp
     @enquiries = Enquiry.all
   end
 
