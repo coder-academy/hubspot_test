@@ -16,8 +16,8 @@
   <tbody>
     <% @contacts.each do |contact| %>
       <tr>
-        <td><%= contact.first_name %></td>
-        <td><%= contact.last_name %></td>
+        <td><%= contact.firstname %></td>
+        <td><%= contact.lastname %></td>
         <td><%= contact.email %></td>
         <td><%= contact.phone %></td>
         <td><%= link_to 'Show', contact %></td>
